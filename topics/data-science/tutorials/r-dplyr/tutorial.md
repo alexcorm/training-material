@@ -2,7 +2,6 @@
 layout: tutorial_hands_on
 title: dplyr & tidyverse for data processing
 level: Advanced
-enable: false
 zenodo_link:
 requirements:
 - type: "internal"
