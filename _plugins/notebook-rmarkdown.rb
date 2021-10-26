@@ -125,8 +125,17 @@ module Jekyll
         }
         rmddata['output']['html_document'] = rmddata['output']['html_notebook']
 
+        final_content = [
+          "# Introduction\n",
+          content.gsub(/```r/, "```{r}"),
+          "# Key Points\n",
+        ] + page.data['key_points'].map{|k| "- #{k}"} + [
+            "\n# Congratulations on successfully completing this tutorial!\n",
+              "Please [fill out the feedback on the GTN website](https://training.galaxyproject.org/training-material#{page.url}#feedback) and check there for further resources!\n"
+        ]
+
         page2 = PageWithoutAFile.new(site, "", dir, "tutorial.Rmd")
-        page2.content = YAML.dump(rmddata) + "---\n\n# Introduction\n\n" + content.gsub(/```r/, "```{r}")
+        page2.content = YAML.dump(rmddata) + "---\n" + final_content.join("\n")
         page2.data["layout"] = nil
         page2.data["citation_target"] = 'R'
         site.pages << page2

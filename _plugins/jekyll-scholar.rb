@@ -39,6 +39,11 @@ module Jekyll
         res = %Q(<span>ERROR INVALID CITATION #{@text}</span>)
       end
 
+      if page['citation_target'] == 'jupyter'
+        puts "#{source_page} Notebook!"
+        res.gsub!(/"/, '\"')
+      end
+
       res
     end
 
