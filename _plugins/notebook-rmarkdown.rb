@@ -1,6 +1,7 @@
 require 'fileutils'
 require 'yaml'
 require "kramdown"
+require 'json'
 
 module Jekyll
   class RmarkdownGenerator < Generator
@@ -123,7 +124,7 @@ module Jekyll
           'anchor_sections' => true,
           'code_download' => true,
         }
-        rmddata['output']['html_document'] = rmddata['output']['html_notebook']
+        rmddata['output']['html_document'] = JSON::parse(JSON::generate(rmddata['output']['html_notebook']))
 
         final_content = [
           "# Introduction\n",
@@ -135,7 +136,7 @@ module Jekyll
         ]
 
         page2 = PageWithoutAFile.new(site, "", dir, "tutorial.Rmd")
-        page2.content = YAML.dump(rmddata) + "---\n" + final_content.join("\n")
+        page2.content = rmddata.to_yaml(:line_width => rmddata['author'].size + 10) + "---\n" + final_content.join("\n")
         page2.data["layout"] = nil
         page2.data["citation_target"] = 'R'
         site.pages << page2
