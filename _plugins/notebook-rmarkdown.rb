@@ -89,19 +89,28 @@ module Jekyll
 
         # https://raw.githubusercontent.com/rstudio/cheatsheets/master/rmarkdown-2.0.pdf
         # https://bookdown.org/yihui/rmarkdown/
-        # todo: citations
 
         puts "[GTN/Notebooks/R] Rendering RMarkdown #{fn}"
         fnparts = fn.split('/')
         rmddata = {
           'title' => page.data['title'],
-          'author' => by_line,
+          'author' => "#{by_line}, #{page.data.fetch('license', 'CC-BY')} licensed content from the [Galaxy Training Network](https://training.galaxyproject.org/)",
           'bibliography' => "#{fnparts[2]}-#{fnparts[4]}.bib",
           'output' => {
             'html_notebook' => {
               'toc' => true,
               'toc_depth' => 2,
               'css' => "gtn.css",
+              'toc_float' => {
+                "collapsed" => false,
+                "smooth_scroll" => false,
+              },
+              'theme' => {'bootswatch' => 'journal'}
+            },
+            'word_document' => {
+              'toc' => true,
+              'toc_depth' => 2,
+              'latex_engine' => 'xelatex',
             },
             'pdf_document' => {
               'toc' => true,
@@ -109,12 +118,15 @@ module Jekyll
               'latex_engine' => 'xelatex',
             },
           },
-          'date' => begin page.last_modified.to_s rescue Time.new end,
+          'date' => begin page.last_modified.to_s rescue Time.new.to_s end,
+          'link-citations' => true,
+          'anchor_sections' => true,
+          'code_download' => true,
         }
-        rmddata['output']['html_document'] = rmddata['output']['html_notebook'].clone
+        rmddata['output']['html_document'] = rmddata['output']['html_notebook']
 
         page2 = PageWithoutAFile.new(site, "", dir, "tutorial.Rmd")
-        page2.content = YAML.dump(rmddata) + "---\n\n" + content.gsub(/```r/, "```{r}")
+        page2.content = YAML.dump(rmddata) + "---\n\n# Introduction\n\n" + content.gsub(/```r/, "```{r}")
         page2.data["layout"] = nil
         page2.data["citation_target"] = 'R'
         site.pages << page2
