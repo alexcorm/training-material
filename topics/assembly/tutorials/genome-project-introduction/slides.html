@@ -1,0 +1,140 @@
+---
+layout: tutorial_slides
+logo: "GTN"
+
+title: "An introduction to get started in genome assembly and annotation"
+contributors:
+  - abretaud
+  - alexcorm
+  - stephanierobin
+  - r1corre
+  - lleroi 
+level: Introductory 
+---
+
+# Steps for started a genome project
+
+Step 1 - Build a wide community for the project if possible
+
+Step 2 - Gather information about the target genome
+
+Step 3: Select the best possible DNA source and extraction
+
+Step 5: Choose an appropriate sequencing technology
+
+Step 6: Check the computational resources and requirements
+
+---
+
+# Build a wide community for the project if possible
+
+Aim of a genome projects is to sequence the entire target genome for a wide range of genomics applications
+
+Analyses, reanalyses and for integration of genomic and other phenotype information requires:
+
+* **Facilities** - Wet lab, sequencing, bioinformatics,…
+* **Personnel** - Skill intensive
+* **Software's** - Knowledge intensive
+
+/!\ Data storage, maintenance, transfer, and analysis costs will also likely remain substantial and represent an increasing proportion of overall sequencing costs in the future
+
+---
+
+# Gather information about the target genome 
+
+## Genome size
+
+** Flux cytometry **
+
+** Databases **
+* Fungi: http://www.zbi.ee/fungalgenomesize
+* Animals: http://www.genomesize.com
+* Plants: http://data.kew.org/cvalues 
+
+** Bibliography **
+
+TODO: add figure
+
+---
+
+# Gather information about the target genome
+
+## GC content
+
+** Sequencing is not random **
+* GC and AT rich regions are under sequenced
+* Other chemistry quirks
+* More depth is needed and combination of technologies
+
+TODO: add figure
+
+---
+
+# Gather information about the target genome
+
+## Ploidy level
+** Number of sets of chromosomes in a cell (N) **
+
+* Bacteria – 1N
+* Human, mouse, rat – 2N
+* Amphibians (Xenopus) – 2N to 12N 
+* Plants (wheat) – 6N 
+* ** Autopolyploid **
+* ** Hybrids **
+
+** Higher ploidy demands higher sequencing coverage **
+
+---
+
+# Gather information about the target genome
+
+## Heterozygosity level
+
+** Heterozygous ** : Locus-specific,  diploid (2N) organism has two different alleles at the same locus
+
+** Heterozygosity ** is a metric used to denote the probability an individual will be heterozygous at a given allele
+
+Higher heterozygosity demands ** higher sequencing coverage **
+
+
+** Higher heterozygosity = more diverse = harder to assemble **
+
+---
+
+# Gather information about the target genome
+
+## Heterozygosity level
+
+TODO: Heng Li blog post about phased genome assmeblies
+
+---
+
+# Gather information about the target genome
+
+## Complexity aka repeats elements
+
+** It is impossible to resolve repeats of length L unless you have reads longer than L **
+
+Most common source of assembly errors 
+ 
+TODO: add figure
+
+---
+
+# Gather information about the target genome
+
+#Others
+
+* ** Karyotype ** : chromosome number
+* ** Sex chromosome system **: None, XY, ZW, UV,…
+* ** Purity **: possible presence of contaminants and/or symbionts?
+* Does other ** useful data (NCBI, SRA, ENA, etc) ** exist that could improve my assembly?
+
+---
+
+# Gather information about the target genome
+
+## Tips
+
+* ** Flux cytometry ** :  genome size and ploidy level
+* ** k-mer frequency from Illumina reads ** : genome size, ploidy level, GC content, heterozygosity and even repeats composition!
