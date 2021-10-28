@@ -10,8 +10,8 @@ questions:
   - How to improve the quality of a sequence dataset?
 objectives:
   - Manipulate FASTQ files
-  - Control quality from a FASTQ file
-  - Use FastQC/NanoPlot/PycoQC tool
+  - Control quality from a FASTQ file for short and long reads
+  - Use FastQC/NanoPlot/PycoQC
   - Understand output
   - Use tools for quality correction
 requirements:
@@ -226,9 +226,17 @@ A versatile tool for short and long reads quality control
 
 ---
 
-### Per-base Quality
+### Per-base Quality - Nanopore
 
 ![A graph in between the previous two, mostly green, but gts to yellow  by base 30 and red by base 33.](../../images/per_base_sequence_quality_medium.png)
+
+<i class="fa fa-thumbs-up"></i> <i class="fa fa-thumbs-down"></i> Intermediate quality score
+
+---
+
+### Per-base Quality - PacBio HiFi
+
+![TODO](../../images/per_base_sequence_quality_pacbio_hifi_good.png)
 
 <i class="fa fa-thumbs-up"></i> <i class="fa fa-thumbs-down"></i> Intermediate quality score
 
@@ -237,6 +245,14 @@ A versatile tool for short and long reads quality control
 ### Per-sequence Quality
 
 ![A per-sequence quality showing quality score distribution histogram with average quality per read plotted. Most reads pile up around quality 30, but another peak appears at 17. very few reads have quality less than 10.](../../images/per_sequence_quality.png)
+
+---
+
+### Per-sequence Quality - Nanopore
+
+---
+
+### Per-sequence Quality - PacBio HiFi
 
 ---
 
@@ -301,6 +317,10 @@ Some high throughput sequencers generate sequence fragments of uniform length, w
 FastQC generates a graph showing the distribution of fragment sizes in the file which was analysed. In many cases this will produce a simple graph showing a peak only at one size, but for variable length FASTQ files this will show the relative amounts of each different size of sequence fragment.
 
 This module will raise a warning if all sequences are not the same length. This module will raise an error if any of the sequences have zero length.
+
+---
+
+### Sequence length distribution - Long reads
 
 ---
 
