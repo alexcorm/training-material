@@ -11,8 +11,8 @@ questions:
 objectives:
   - Manipulate FASTQ files
   - Control quality from a FASTQ file
-  - Use FastQC tool
-  - Understand FastQC output
+  - Use FastQC/NanoPlot/PycoQC tool
+  - Understand output
   - Use tools for quality correction
 requirements:
 time_estimation: "1h"
@@ -22,6 +22,7 @@ key_points:
   - Re-run FastQC to check the impact of the quality control
 contributors:
   - bebatut
+  - alexcorm
 ---
 
 # Why Quality Control?
@@ -36,6 +37,7 @@ Potential audience poll ideas:
 Comments:
 
 - Process of removing low quality sequences that might corrupt downstream analyses
+- Assembler like Spades have auto-correction process and ask to give raw data
 
 ---
 
@@ -168,10 +170,17 @@ Phred Quality Score | Probability of incorrect base call | Base call accuracy
 - Uses ASCII (common computer encoding, maps numbers to characters)
 - Each technology has a different mapping
 - Mostly see illumina 1.8 these days, others only if historical
+- TODO: add PacBio HiFi quality
 
 ---
 
 ## Identifying Potential Quality Issues
+
+---
+
+## FastQC
+
+A versatile tool for short and long reads quality control
 
 ---
 
@@ -334,6 +343,58 @@ Over-represented K-mers will appear as sharp spikes at a single point in the seq
 
 ---
 
+## NanoPlot
+
+A quality control tool for long reads (Nanopore/PacBio)
+
+---
+
+### NanoPlot report
+
+![Header of a NanoPlot html report ](../../images/nanoplot_report.png)
+
+
+???
+
+- Analyses your fastq/bam files
+- They report on different aspects of the sequence
+
+- Modules include:
+  - Basic Statistics
+  - Sequence Length Distribution
+
+---
+
+### Read length vs read quality score
+
+![distribution for HiFi reads with a default filter >= Q20 ](../../images/LengthvsQualityScatterPlot_dot.png)
+
+---
+
+### Histogram of read length
+
+![distribution around 15 / 20kb in HiFi mode ](../../images/HistogramReadlength.png)
+
+---
+
+### Run yield by Length
+
+![Yield for HiFi run ](../../images/Yield_By_Length.png)
+
+---
+
+## PycoQC
+
+A interactive quality control tool for basecalled Nanopore data
+
+---
+
+### PycoQC report
+
+
+
+---
+
 ## Improving the quality of sequences
 
 - Filtering of sequences
@@ -346,3 +407,7 @@ Over-represented K-mers will appear as sharp spikes at a single point in the seq
     - from low quality score parts
     - tails
     - ...
+
+???
+
+- Trimming is not always recommended (see Spades documentation)
