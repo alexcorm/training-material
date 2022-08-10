@@ -44,6 +44,7 @@
       "maintainer_contact": "gitter",
       "gitter": "hexylena",
       "joined": "2017-09",
+      "elixir_node": "nl",
       "id": "hexylena",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json"
     },
@@ -60,13 +61,21 @@
       "email": "D.vrins@live.nl",
       "id": "dirowa",
       "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json"
+    },
+    {
+      "name": "Avans Hogeschool",
+      "joined": "2020-11",
+      "funder": true,
+      "funding_statement": "A number of our employees contribute directly to the Galaxy Training Network and seek to make our higher education learning materials more accessible to a wider audience through the GTN platform. <a href=\"https://avans.nl/\">avans.nl</a>",
+      "id": "avans-atgm",
+      "url": "https://training.galaxyproject.org/training-material/api/contributors/avans-atgm.json"
     }
   ],
   "abbreviations": {
     "SciWMS": "Scientific Workflow Management System",
     "DAG": "Directed Acyclic Graph"
   },
-  "last_modified_at": "18-Nov-21",
+  "last_modified_at": "14-Dec-21",
   "url": "/topics/data-science/tutorials/snakemake/tutorial.html",
   "topic_name": "data-science",
   "tutorial_name": "snakemake"

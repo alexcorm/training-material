@@ -40,6 +40,8 @@
                                
                        
                                
+                       
+                               
 			{
 				"id": "introduction/tutorials/options-for-using-galaxy/slides",
 				"topic": "Introduction to Galaxy Analyses",
@@ -121,6 +123,8 @@
                                
                        
                                
+                       
+                               
 			{
 				"id": "admin/tutorials/ansible-galaxy/slides",
 				"topic": "Galaxy Server administration",
@@ -180,6 +184,10 @@
                                
                        
                                
+                       
+                               
+                       
+                               
 			{
 				"id": "admin/tutorials/cvmfs/slides",
 				"topic": "Galaxy Server administration",
@@ -215,7 +223,7 @@
 			{
 				"id": "admin/tutorials/users-groups-quotas/slides",
 				"topic": "Galaxy Server administration",
-				"title": "User, Group and Quota managment"
+				"title": "User, Role, Group and Quota managment"
 			},
 								
                                
@@ -226,6 +234,8 @@
 					
                        
                        
+                       
+                               
                        
                                
                        
@@ -284,6 +294,24 @@
                                
                        
                                
+			{
+				"id": "climate/tutorials/pangeo/slides",
+				"topic": "Climate",
+				"title": "Pangeo ecosystem 101 for everyone - Introduction to Xarray Galaxy Tools"
+			},
+								
+                               
+                       
+                               
+			{
+				"id": "climate/tutorials/pangeo-notebook/slides",
+				"topic": "Climate",
+				"title": "Pangeo Notebook in Galaxy - Introduction to Xarray"
+			},
+								
+                               
+                       
+                               
                        
                
 					
@@ -304,10 +332,14 @@
                        
                                
                        
+                               
+                       
                
 					
                        
                        
+                       
+                               
                        
                                
                        
@@ -330,6 +362,8 @@
 				"title": "Creating Slides"
 			},
 								
+                               
+                       
                                
                        
                                
@@ -407,10 +441,42 @@
                        
                                
                        
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
+                               
+                       
                
 					
                        
                        
+                       
+                               
                        
                                
                        
@@ -466,10 +532,16 @@
 								
                                
                        
+                               
+                       
                
 					
                        
                        
+                       
+                               
+                       
+                               
                        
                                
                        
@@ -518,6 +590,15 @@
                        
                        
                        
+                               
+                       
+                               
+                       
+               
+					
+                       
+                       
+                       
                
 					
                        
@@ -563,10 +644,25 @@
                        
                                
                        
+                               
+                       
+                               
+                       
                
 					
                        
                        
+                       
+                               
+                       
+                               
+			{
+				"id": "genome-annotation/tutorials/crispr-screen/slides",
+				"topic": "Genome Annotation",
+				"title": "CRISPR screen analysis"
+			},
+								
+                               
                        
                                
                        
@@ -609,13 +705,6 @@
                        
                                
                        
-               
-					
-                       
-                       
-                       
-                               
-                       
                                
                        
                                
@@ -653,6 +742,8 @@
 					
                        
                        
+                       
+                               
                        
                                
                        
@@ -758,6 +849,31 @@
                        
                        
                        
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
+               
+					
+                       
+                       
+                       
                                
                        
                                
@@ -804,10 +920,23 @@
                        
                                
                        
+                               
+                       
                
 					
                        
                        
+                       
+               
+					
+                       
+                       
+                       
+                               
+                       
+                               
+                       
+                               
                        
                
 					
@@ -835,6 +964,8 @@
 				"title": "An introduction to scRNA-seq data analysis"
 			},
 								
+                               
+                       
                                
                        
                                
@@ -911,6 +1042,8 @@
 					
                        
                        
+                       
+                               
                        
                                
                        
